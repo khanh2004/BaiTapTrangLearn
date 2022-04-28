@@ -1,0 +1,1 @@
+print("tên:hoàng duy khánh, tuổi:18, nơi ở: ninh bình")
