@@ -36,32 +36,32 @@ while True :
     choice = (input("your choice 1 OR 2 ..."))
         
     if choice == "1" :
-        added_item_name = input("date...dd/mm    or enter 'exit' if you want to return......")
+        added_item_name = input("date...dd/mm...")
         for i in daily_spending.copy() :
-                    if i == added_item_name :
-                            while True:
-                                print(f"Date {i} has already existed",end=", ")
-                                alternative = input("do you want to change the products and cost? Enter 'yes' or 'no'... ")
-                                if alternative.upper() == "NO":
-                                    break            
-                                elif alternative.upper() == "YES":
-                                    changed_products = input('Enter the products, devided by ","...')
-                                    changed_cost = input('Enter the final cost, ended by "$"...') 
-                                    daily_spending[i] ["products"] = changed_products
-                                    daily_spending[i] ["cost"]     = changed_cost
-                                    print("successfully changed")
-                                    break
-                                
-                                
+            if i == added_item_name :
+                    while True:
+                        print(f"Date {i} has already existed",end=", ")
+                        alternative = input("do you want to change the products and cost? Enter 'yes' or 'no'... ")
+                        if alternative.upper() == "NO":
+                            break            
+                        elif alternative.upper() == "YES":
+                            changed_products = input('Enter the products, devided by ","...')
+                            changed_cost = input('Enter the final cost, ended by "$"...') 
+                            daily_spending[i] ["products"] = changed_products
+                            daily_spending[i] ["cost"]     = changed_cost
+                            print("successfully changed")
                             break
+                                
+                                
+                    break
 
-                    else:             
-                        products = input("products...")
-                        cost = input("cost...")
-                        new_item = {added_item_name : {"date" : added_item_name,"products" : products, "cost" : cost}}
-                        add_item(daily_spending, new_item)
-                        print("successfully saved")
-                        break    
+            else:             
+                products = input("products...")
+                cost = input("cost...")
+                new_item = {added_item_name : {"date" : added_item_name,"products" : products, "cost" : cost}}
+                add_item(daily_spending, new_item)
+                print("successfully saved")
+                break    
           
      
                 
