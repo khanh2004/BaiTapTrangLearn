@@ -1,4 +1,4 @@
-ten_mon_can_xoa = [[""]]
+
 from re import L
 from tkinter import ttk 
 from tkinter import *
@@ -23,9 +23,8 @@ def xoa_mon():
     xoa_mon_an_button.grid(column=1,row=2)
     global ten_mon_can_xoa
     ten_mon_can_xoa = ten_mon_can_xoa_entry.get()
-    print(ten_mon_can_xoa)
+
 def an_nut_xoa ():
-        global ten_mon_can_xoa
         for ten_mon_an in range(len(danh_sach_mon_an)):
             if ten_mon_can_xoa in danh_sach_mon_an[ten_mon_an] :
                 messagebox.showwarning("thông báo xóa món","đã xóa món thành công")
@@ -55,6 +54,6 @@ ten_app_label = Label(shop_management, text="APP QUAN LI NHA HANG").grid(row=0, 
 danh_sach_mon_button = Button(shop_management, text="chinh sua danh sach mon", padx=40, pady=50, borderwidth=5, command=open).grid(row=1, column=0)
 tao_hoa_don_ = Button(shop_management, text="tao hoa don", padx=50, pady=50, borderwidth=5,command=open1).grid(row=1, column=1)
 
-print(ten_mon_can_xoa)
+
 
 mainloop()
