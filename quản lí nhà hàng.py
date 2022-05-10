@@ -25,7 +25,7 @@ def xoa_mon():
 def an_nut_xoa ():
         global ten_mon_can_xoa
         for ten_mon_an in range(len(danh_sach_mon_an)):
-            if ten_mon_can_xoa[ten_mon_an -1 ] in danh_sach_mon_an :
+            if ten_mon_can_xoa in danh_sach_mon_an[ten_mon_an] :
                 messagebox.showwarning("thông báo xóa món","đã xóa món thành công")
             else:
                 messagebox.showwarning("thông báo xóa món","xóa món không thành công")
