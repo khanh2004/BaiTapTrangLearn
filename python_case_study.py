@@ -71,7 +71,7 @@ def thanh_toan():
     current_time = time.asctime()
     tong_tien_label = Label(second_frame,  text="tổng cộng",  font=32)
     tong_tien_label.grid(row=3, column=0)
-    tong_tien_value = Label(second_frame, text=str(total), font=32)
+    tong_tien_value = Label(second_frame, text=str(total)+"VNĐ", font=32)
     tong_tien_value.grid(row=3, column=1)
     thoi_gian_label = Label(second_frame, text=current_time)
     thoi_gian_label.grid(row=4, column=1)
