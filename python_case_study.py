@@ -1,5 +1,4 @@
-lich_su_ban_hang_file = open("C:/Users/Administrator/Desktop/hoang_duy_khanh/his.csv", mode="w", encoding="utf-8-sig")
-
+history_file = open("C:/Users/Administrator/Desktop/hoang_duy_khanh/his.csv", mode="w", encoding="utf-8-sig")
 
 from tkinter import *
 from tkinter import ttk
@@ -46,8 +45,6 @@ def lam_moi():
     for i in range(len(oders)):
         print(oders[i].config(textvariable=my_list[i]))
 
-    for w in second_frame.grid_slaves(1):
-        w.grid_remove()
     for w in second_frame.grid_slaves(2):
         w.grid_remove()    
     for w in second_frame.grid_slaves(3):
@@ -56,7 +53,7 @@ def lam_moi():
         w.clipboard_append(history)
         w.grid_remove()
     new_bill = str(history)
-    lich_su_ban_hang_file.write(new_bill + "\n")
+    history_file.write(new_bill + "\n")
     
 def thanh_toan():
     total = 0
